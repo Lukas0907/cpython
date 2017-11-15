@@ -211,7 +211,7 @@ def _setup_func(funcopy, mock):
     funcopy.method_calls = _CallList()
     funcopy.mock_calls = _CallList()
 
-    funcopy.return_value = mock.return_value
+    funcopy.return_value = mock._mock_return_value
     funcopy.side_effect = mock.side_effect
     funcopy._mock_children = mock._mock_children
 
